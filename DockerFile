@@ -1,0 +1,12 @@
+FROM godatadriven/pyspark
+
+#Install requirements
+COPY . .
+RUN pip install -r requirements.txt
+
+#Run application
+WORKDIR .
+
+
+ENTRYPOINT ["python", "app.py"]
+
